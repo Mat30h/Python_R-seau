@@ -1,0 +1,55 @@
+# Network Scanner Pro - Configuration File
+# This file will be automatically created at ~/.network_scanner_pro/config.yaml
+
+# Default scan profile to use
+default_profile: standard
+
+# Custom scan profiles
+profiles:
+  custom_web:
+    ports: [80, 443, 8080, 8443, 3000, 5000]
+    threads: 100
+    ping_timeout: 0.8
+    conn_timeout: 0.5
+    retry: 2
+    service_detection: true
+
+  custom_db:
+    ports: [1433, 3306, 5432, 27017, 6379, 9200]
+    threads: 50
+    ping_timeout: 1.0
+    conn_timeout: 1.0
+    retry: 2
+    service_detection: true
+
+# Logging configuration
+logging:
+  level: INFO # DEBUG, INFO, WARNING, ERROR
+  max_size_mb: 10
+  backup_count: 5
+
+# Export defaults
+export:
+  auto_csv: true
+  auto_json: false
+  auto_html: false
+  output_dir: ./scans
+
+# Performance tuning
+performance:
+  max_threads: 200
+  rate_limit_per_sec: 1000
+  batch_size: 100
+
+# Database
+database:
+  enabled: true
+  path: ~/.network_scanner_pro/scan_history.db
+  auto_cleanup_days: 90
+
+# Advanced options
+advanced:
+  use_scapy: false # Enable Scapy for ARP (requires root)
+  use_ping3: true # Use ping3 library instead of system ping
+  dns_timeout: 1.0
+  arp_scan: true

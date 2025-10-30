@@ -1,0 +1,60 @@
+╔════════════════════════════════════════════════════════════════════════╗
+║                ��� NETWORK SCANNER PRO - Guide d'Usage                  ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+��� DÉMARRAGE RAPIDE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  Lancement simple (mode interactif):
+    python start.py
+    OU
+    python network_scanner_pro.py
+
+2️⃣  Scan rapide d'un réseau:
+    python network_scanner_pro.py --network 192.168.1.0/24 --profile quick
+
+3️⃣  Scan complet avec export:
+    python network_scanner_pro.py --network 192.168.1.0/24 --profile full --export csv,json,html
+
+
+��� PROFILS DE SCAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+quick      →  3 ports,   50 threads,  ~30s   (test rapide)
+standard   →  14 ports,  100 threads, ~2min  (usage quotidien)
+full       →  1024 ports, 200 threads, ~15min (scan complet)
+security   →  18 ports,  150 threads, ~3min  (audit sécurité)
+
+
+���️  UTILITAIRES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Statistiques:      python scanner_utils.py stats
+Nettoyage:         python scanner_utils.py cleanup --days 30
+Comparaison:       python scanner_utils.py compare scan1.json scan2.json
+Santé de la DB:    python scanner_utils.py health
+
+
+��� FORMATS D'EXPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CSV   →  scan_[reseau]_[date].csv   (tableau structuré)
+JSON  →  scan_[reseau]_[date].json  (format API)
+HTML  →  scan_[reseau]_[date].html  (rapport visuel)
+
+
+⚠️  AVERTISSEMENT LÉGAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Utilisez UNIQUEMENT sur vos propres réseaux ou avec autorisation écrite.
+L'utilisation non autorisée est ILLÉGALE.
+
+
+��� DOCUMENTATION COMPLÈTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+README.md        →  Documentation complète
+QUICKSTART.md    →  Guide de démarrage rapide
+CHANGELOG.md     →  Historique des versions
+
+╚════════════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,12 @@
+# Core dependencies
+ipaddress>=1.0.23
+
+# Networking tools
+psutil>=5.9.0
+ping3>=4.0.0
+
+# Data handling
+pyyaml>=6.0
+
+# Optional but recommended for advanced features
+scapy>=2.5.0  # For ARP scanning (requires admin/root)
